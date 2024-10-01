@@ -60,8 +60,8 @@ export default function Haader({
       { label: "Contact", url: "/" },
     ],
     buttons: [
-      { id: "change-me-1", href: "/", text: "Change me", outline: false },
-      { id: "change-me-2", href: "/", text: "Change me", outline: true },
+      { id: "change-me-1", href: "/", text: "Home", outline: false },
+      { id: "change-me-2", href: "/", text: "Home", outline: true },
     ],
   },
 }: Nav) {

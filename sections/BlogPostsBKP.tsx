@@ -35,19 +35,12 @@ function Container({ children }: {
   children: ComponentChildren;
 }) {
   return (
-    <div
-      class="container lg:mx-auto mx-2  text-sm"
-      id="tab-contents"
-      role="tabpanel"
-      hx-trigger="load"
-    >
-      <div class="space-y-8">
-        {children}
-      </div>
+    <div class="container lg:mx-auto lg:py-14 mx-2 py-12 text-sm">
+      <div class="space-y-8">{children}</div>
     </div>
   );
 }
-export default function BlogPostsHome(
+export default function BlogPosts(
   {
     cta = { text: "Show more" },
     posts,
@@ -65,60 +58,49 @@ export default function BlogPostsHome(
       pagination: { perPage, page: page + 1 },
     },
   });
-  // function calculateReadingTime(words: number): string {
-  //   const wordsPerMinute = 250;
-  //   const estimatedTimeMinutes = words / wordsPerMinute;
-  //   const roundedReadingTime = Math.round(estimatedTimeMinutes);
-  //   return `${roundedReadingTime} min`;
-  // }
+  function calculateReadingTime(words: number): string {
+    const wordsPerMinute = 250;
+    const estimatedTimeMinutes = words / wordsPerMinute;
+    const roundedReadingTime = Math.round(estimatedTimeMinutes);
+    return `${roundedReadingTime} min`;
+  }
   const ContainerComponent = page === 0 ? Container : Fragment;
   return (
     <ContainerComponent>
       <>
-        <div class="gap-8 grid grid-cols-1">
+        <div class="gap-8 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
           {posts?.slice(from, to).map((post) => (
             <a
               href={`/blog/${post.slug}`}
-              class="border border-secondary flex flex-row overflow-hidden "
+              class="border border-secondary overflow-hidden rounded-lg"
             >
               <Image
                 width={380}
                 height={274}
-                class="object-fit w-[30%]"
+                class="object-fit w-full"
                 sizes="(max-width: 640px) 100vw, 30vw"
                 src={post.image || ""}
                 alt={post.image}
                 decoding="async"
                 loading="lazy"
               />
-              <div class="p-6 space-y-4 w-[70%] bg-white">
-                {
-                  /* <div class="font-semibold hidden">
+              <div class="p-6 space-y-4">
+                <div class="font-semibold">
                   {calculateReadingTime(post.content.split(" ").length)}
-                </div> */
-                }
-                <div class="flex flex-wrap gap-2">
-                  {post.categories && (
-                    <div class="flex flex-wrap  !my-0 gap-2">
-                      {post.categories?.map((category) => (
-                        <div
-                          class="rounded-badge border border-secondary px-4 py-1 text-xs bg-[#EAEAEB] text-primary font-bold"
-                          key={category.slug}
-                        >
-                          {category.name}
-                        </div>
-                      ))}
-                    </div>
-                  )}
                 </div>
                 <div class="space-y-2">
-                  <h3 class="text-[18px] text-primary font-bold uppercase">
-                    {post.title}
-                  </h3>
-                  <p class="text-sm text-primary">{post.excerpt}</p>
+                  <h3 class="text-2xl">{post.title}</h3>
+                  <p class="text-base">{post.excerpt}</p>
                 </div>
                 <div class="flex flex-wrap gap-2">
-                  <span class="text-primary font-bold">
+                  {post.categories?.map((category) => (
+                    <div class="badge badge-lg badge-primary text-xs">
+                      {category.name}
+                    </div>
+                  ))}
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span>
                     {post.date
                       ? new Date(post.date).toLocaleDateString("en-US", {
                         month: "long",
@@ -127,36 +109,26 @@ export default function BlogPostsHome(
                       })
                       : ""}
                   </span>
-                  {/* <span>•</span> */}
+                  <span>•</span>
                   <span>{post.authors[0]?.name}</span>
                 </div>
               </div>
             </a>
           ))}
         </div>
-        {posts && to <= posts.length && (
+        {posts && to < posts.length && (
           <div class="flex justify-center w-full" id={postList}>
             <button
               hx-get={fetchMoreLink}
               hx-swap="outerHTML"
               hx-target={`#${postList}`}
               aria-label={cta.text}
-              class="bg-primary max-w-[427px] btn-load-more w-full rounded-none relative max-h-[40px] h-[40px]"
+              class="btn btn-primary"
             >
-              <span class="inline [.htmx-request_&]:hidden uppercase text-white">
+              <span class="inline [.htmx-request_&]:hidden">
                 {cta.text}
               </span>
               <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
-              <svg
-                width="15"
-                height="48"
-                viewBox="0 0 15 48"
-                className="absolute right-[-15px] top-0"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M0 0H15V29.0909L0 40V0Z" fill="#031D41" />
-              </svg>
             </button>
           </div>
         )}

@@ -2,7 +2,29 @@
   "name": "Blog Post Page",
   "path": "/blog/:slug",
   "sections": [
-    { "__resolveType": "site/sections/Header.tsx" },
+    {
+      "__resolveType": "site/sections/Header.tsx",
+      "navigation": {
+        "buttons": [
+          {
+            "href": "/",
+            "text": "Home",
+            "id": "home"
+          },
+          {
+            "href": "/",
+            "text": "Home",
+            "id": "home"
+          }
+        ],
+        "links": [
+          {
+            "label": "Home",
+            "url": "/"
+          }
+        ]
+      }
+    },
     {
       "__resolveType": "site/sections/BlogPost.tsx",
       "post": {
@@ -20,7 +42,9 @@
         }
       }
     },
-    { "__resolveType": "site/sections/Footer.tsx" }
+    {
+      "__resolveType": "site/sections/Footer.tsx"
+    }
   ],
   "__resolveType": "website/pages/Page.tsx",
   "seo": {

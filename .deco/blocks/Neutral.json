@@ -16,7 +16,7 @@
   },
   "mainColors": {
     "base-100": "#ffffff",
-    "primary": "#171717",
+    "primary": "#031D41",
     "secondary": "#c7c7c7",
     "tertiary": "#404040",
     "neutral": "#333333",
@@ -27,6 +27,12 @@
   },
   "font": {
     "__resolveType": "website/loaders/fonts/googleFonts.ts",
-    "fonts": [{ "variations": [], "family": "Albert Sans" }]
-  }
+    "fonts": [
+      {
+        "variations": [],
+        "family": "Cairo"
+      }
+    ]
+  },
+  "mode": "light"
 }

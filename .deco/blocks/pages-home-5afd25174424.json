@@ -7,14 +7,97 @@
     },
     {
       "__resolveType": "site/sections/Hero.tsx",
-      "title": "<p>Click here to tweak this text however you want.</p>",
-      "description": "This text is entirely editable, tailor it freely."
+      "title": "<p>DICAS e Notícias Mundo do caminhão</p>"
     },
     {
       "__resolveType": "site/sections/MainPost.tsx",
       "post": {
         "__resolveType": "blog/loaders/BlogPostItem.ts",
         "slug": "why-we-web"
+      },
+      "posts": [
+        {
+          "authors": [
+            {
+              "name": "Name of the Author",
+              "email": "author@deco.cx",
+              "jobTitle": "Author",
+              "company": "deco.cx",
+              "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/7286de42-e9c5-4fcb-ae8b-b992eea4b78e"
+            }
+          ],
+          "categories": [
+            {
+              "name": "Performance",
+              "slug": "performance"
+            }
+          ],
+          "extraProps": [],
+          "slug": "lorem-ipsum",
+          "date": "2024-10-31",
+          "title": "o que é cashback e como usar?",
+          "excerpt": "Já imaginou comprar e ainda receber algo em troca? Além dos descontos e das opções ...",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateblogunc/c52b0174-0ab4-4bbf-8cdf-a5ea53b33235/image-366-(4).png",
+          "content": "<p><span>O resgate pode ser feito na próxima compra, com o abatimento do valor. Assim, além dos descontos oferecidos pela loja, o caminhoneiro pode economizar ainda mais com a utilização do seu Cashback.</span></p><p></p><p>Mais dúvidas sobre Cashback…</p><p></p>",
+          "seo": {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateblogunc/c52b0174-0ab4-4bbf-8cdf-a5ea53b33235/image-366-(4).png",
+            "title": "o que é cashback e como usar?",
+            "description": "Mais dúvidas sobre Cashback…"
+          },
+          "alt": "cashback"
+        },
+        {
+          "authors": [
+            {
+              "name": "Name of the Author",
+              "email": "author@deco.cx",
+              "jobTitle": "Author",
+              "company": "deco.cx",
+              "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/7286de42-e9c5-4fcb-ae8b-b992eea4b78e"
+            }
+          ],
+          "categories": [
+            {
+              "name": "Performance",
+              "slug": "performance"
+            }
+          ],
+          "extraProps": [],
+          "slug": "lorem-ipsum",
+          "date": "2024-10-31",
+          "title": "o que é cashback e como usar?",
+          "excerpt": "Já imaginou comprar e ainda receber algo em troca? Além dos descontos e das opções ...",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateblogunc/c52b0174-0ab4-4bbf-8cdf-a5ea53b33235/image-366-(4).png",
+          "content": "<p><span>O resgate pode ser feito na próxima compra, com o abatimento do valor. Assim, além dos descontos oferecidos pela loja, o caminhoneiro pode economizar ainda mais com a utilização do seu Cashback.</span></p><p></p><p>Mais dúvidas sobre Cashback…</p><p></p>",
+          "seo": {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateblogunc/c52b0174-0ab4-4bbf-8cdf-a5ea53b33235/image-366-(4).png",
+            "title": "o que é cashback e como usar?",
+            "description": "Mais dúvidas sobre Cashback…"
+          },
+          "alt": "cashback"
+        }
+      ]
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Categories.tsx",
+        "navigation": {
+          "links": [
+            {
+              "url": "/performance",
+              "label": "Performance"
+            },
+            {
+              "label": "Culture",
+              "url": "/culture"
+            },
+            {
+              "label": "Customization",
+              "url": "/customization"
+            }
+          ]
+        }
       }
     },
     {
@@ -22,6 +105,98 @@
       "posts": {
         "__resolveType": "blog/loaders/BlogpostList.ts",
         "count": 6
+      },
+      "pagination": {
+        "perPage": 4,
+        "page": 0
+      },
+      "cta": {
+        "text": "carregar mais"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Testimonials.tsx",
+        "posts": [
+          {
+            "authors": [],
+            "categories": [
+              {
+                "name": "Customization",
+                "slug": "customization"
+              }
+            ],
+            "extraProps": [],
+            "title": "teste blog carrossel",
+            "excerpt": "Já imaginou comprar e ainda receber algo em troca? Além dos descontos e das opções ...",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateblogunc/10e55f92-8970-4d23-806f-9e69c8ac88ca/image-366-(6).png",
+            "date": "2024-10-01",
+            "slug": "post-carrossel",
+            "content": "<p>lorem</p>",
+            "seo": {
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateblogunc/c52b0174-0ab4-4bbf-8cdf-a5ea53b33235/image-366-(4).png"
+            }
+          },
+          {
+            "authors": [],
+            "categories": [],
+            "extraProps": [],
+            "title": "teste blog carrossel",
+            "excerpt": "description carrossel",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateblogunc/c52b0174-0ab4-4bbf-8cdf-a5ea53b33235/image-366-(4).png",
+            "date": "2024-10-01",
+            "slug": "post-carrossel",
+            "content": "<p>lorem</p>",
+            "seo": {
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateblogunc/c52b0174-0ab4-4bbf-8cdf-a5ea53b33235/image-366-(4).png"
+            }
+          },
+          {
+            "authors": [],
+            "categories": [],
+            "extraProps": [],
+            "title": "teste blog carrossel",
+            "excerpt": "description carrossel",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateblogunc/c52b0174-0ab4-4bbf-8cdf-a5ea53b33235/image-366-(4).png",
+            "date": "2024-10-01",
+            "slug": "post-carrossel",
+            "content": "<p>lorem</p>",
+            "seo": {
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateblogunc/c52b0174-0ab4-4bbf-8cdf-a5ea53b33235/image-366-(4).png"
+            }
+          },
+          {
+            "authors": [],
+            "categories": [],
+            "extraProps": [],
+            "title": "teste blog carrossel",
+            "excerpt": "description carrossel",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateblogunc/c52b0174-0ab4-4bbf-8cdf-a5ea53b33235/image-366-(4).png",
+            "date": "2024-10-01",
+            "slug": "post-carrossel",
+            "content": "<p>lorem</p>",
+            "seo": {
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateblogunc/c52b0174-0ab4-4bbf-8cdf-a5ea53b33235/image-366-(4).png"
+            }
+          },
+          {
+            "authors": [],
+            "categories": [],
+            "extraProps": [],
+            "title": "teste blog carrossel",
+            "excerpt": "description carrossel",
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateblogunc/c52b0174-0ab4-4bbf-8cdf-a5ea53b33235/image-366-(4).png",
+            "date": "2024-10-01",
+            "slug": "post-carrossel",
+            "content": "<p>lorem</p>",
+            "seo": {
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/templateblogunc/c52b0174-0ab4-4bbf-8cdf-a5ea53b33235/image-366-(4).png"
+            }
+          }
+        ],
+        "arrows": true,
+        "dots": true
       }
     },
     {
