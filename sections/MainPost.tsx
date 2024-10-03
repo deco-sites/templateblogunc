@@ -65,7 +65,7 @@ export default function MainPost({
             {post.image && (
               <Image
                 width={656}
-                height={500}
+                height={372}
                 class="object-fit w-full z-10"
                 sizes="(max-width: 656px) 100vw, 30vw"
                 src={post.image || ""}

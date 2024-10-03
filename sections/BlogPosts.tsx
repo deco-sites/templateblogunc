@@ -82,8 +82,8 @@ export default function BlogPostsHome(
               class="border border-secondary flex flex-row overflow-hidden "
             >
               <Image
-                width={380}
-                height={274}
+                width={399}
+                height={208}
                 class="object-fit w-[30%]"
                 sizes="(max-width: 640px) 100vw, 30vw"
                 src={post.image || ""}
