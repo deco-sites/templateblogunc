@@ -2627,6 +2627,9 @@ input.tab:checked + .tab-content,
 .h-2 {
   height: 0.5rem;
 }
+.h-8 {
+  height: 2rem;
+}
 .h-\[174px\] {
   height: 174px;
 }
@@ -2699,6 +2702,9 @@ input.tab:checked + .tab-content,
 }
 .w-7 {
   width: 1.75rem;
+}
+.w-8 {
+  width: 2rem;
 }
 .w-\[30\%\] {
   width: 30%;

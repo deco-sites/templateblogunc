@@ -141,7 +141,7 @@ function Buttons() {
   return (
     <div class="flex gap-4 w-full justify-between">
       <div class="flex items-center justify-center z-10 col-start-3 row-start-2">
-        <Slider.PrevButton class="flex items-center justify-center btn-square border border-[#B91C1C] relative left-[-8px]">
+        <Slider.PrevButton class="flex items-center justify-center btn-square border border-[#B91C1C] relative left-[-8px] h-8 w-8">
           <Icon
             class="text-[#B91C1C]"
             size={24}
@@ -151,7 +151,7 @@ function Buttons() {
         </Slider.PrevButton>
       </div>
       <div class="flex items-center justify-center z-10 col-start-1 row-start-2">
-        <Slider.NextButton class="flex items-center justify-center btn-square border border-[#B91C1C] right-[-8px]">
+        <Slider.NextButton class="flex items-center justify-center btn-square border border-[#B91C1C] absolute right-[-8px] w-8 h-8">
           <Icon
             class="text-[#B91C1C]"
             size={24}
